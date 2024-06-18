@@ -1,17 +1,43 @@
+<!-- templates/contenido/formulario.html -->
 {% extends "contenido/encabezado.html" %}
-{% block titulo %}FORMULARIO{% endblock%}
-{% block contenido%}
 
-<h2> Registrar </h2>
-        <p>Matricula: <input type="text" name="matricula"></p>
-        <p>Nombre <input type="text" name="nombre"></p>
-        <p>Carrera:
-        <select name="carrera">
-            <option>BASE DE DATOS</option>
-            <option>PROGRAMACION</option>
-        </select>
-        </p>
-        <input type="radio" name="turno" value="matricula">Matutino
-        <input type="radio" name="turno" value="Vespertino">Vespertino
-        <p><input type="Button" name="Enviar">
-{%endblock%}
+{% block titulo %}Formulario{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Registrar</h2>
+            <form>
+                <div class="form-group">
+                    <label for="matricula">Matrícula</label>
+                    <input type="text" class="form-control" id="matricula" name="matricula">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Carrera</label>
+                    <select class="form-control" id="carrera" name="carrera">
+                        <option>BASE DE DATOS</option>
+                        <option>PROGRAMACION</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Turno</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="turno" id="matutino" value="matutino">
+                        <label class="form-check-label" for="matutino">Matutino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="turno" id="vespertino" value="vespertino">
+                        <label class="form-check-label" for="vespertino">Vespertino</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

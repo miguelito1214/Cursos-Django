@@ -1,13 +1,29 @@
+<!-- templates/contenido/contacto.html -->
 {% extends "contenido/encabezado.html" %}
 
-{% block titulo %}CONTACTO{% endblock%}
+{% block titulo %}Contacto{% endblock %}
 
-
-{% block contenido%}
-
-<h2>Contacto</h2>
-     <p>Nombre:<input type="text" name="nombre"><p>
-     <p>Correo:<input type="text" name="correo"><p>
-     <p>Comentarios:</p><p><textarea cols="50" rows="10"></textarea></p>
-     <p><input type="Button" name="enviar" value="Enviar"/></p>
-{%endblock%}
+{% block contenido %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Contacto</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="email" class="form-control" id="correo" name="correo">
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea class="form-control" id="comentarios" name="comentarios" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

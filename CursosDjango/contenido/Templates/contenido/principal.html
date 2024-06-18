@@ -1,7 +1,13 @@
+<!-- templates/contenido/principal.html -->
 {% extends "contenido/encabezado.html" %}
 
-{% block titulo %}PRINCIPAL{% endblock %}
+{% block titulo %}Principal{% endblock %}
 
 {% block contenido %}
-   <h1>BIENVENIDO A MI SITIO WEB</h1>
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">BIENVENIDO A MI SITIO WEB</h1>
+        <p class="lead">Este es un sitio web utilizando Django y Bootstrap.</p>
+    </div>
+</div>
 {% endblock %}
